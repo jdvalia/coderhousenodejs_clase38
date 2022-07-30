@@ -1,0 +1,12 @@
+
+[2022-07-27T09:58:14.686] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"jorge@gmail.com.ar\"}"}
+[2022-07-27T09:58:14.687] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"jorge@gmail.com.ar"}',
+    detalles: undefined
+  }
+}
+[2022-07-30T18:04:08.660] [ERROR] default - Falló el envio de whatsapp del nuevo order - error:ReferenceError: err is not defined

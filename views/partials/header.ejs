@@ -1,0 +1,40 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100 px-4">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto p-12">
+
+                <!--menus para cualquier visitante del sitio sin loguearse-->
+                <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+
+                <!--menus para cualquier usuario, caso contrario aparece link login-->
+                <% if(rol!==undefined){ %>
+                    <li class="nav-item"><a class="nav-link" href="/chat">Chat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    <% } else { %>
+                        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                        <% } %>
+                            <!--menus solo para administradores-->
+                            <% if(rol==="admin" ){ %>
+                                &nbsp;&nbsp;
+                                <li class="nav-item"> <a class="nav-link" href="/crudUsuarios"> Usuarios</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="/crudProducts"> Products</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="/crudCarts"> Carts</a> </li>
+                                </li>
+                                <li class="nav-item"> <a class="nav-link" href="/crudOrders"> Orders</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="/crudMensajes"> Mensajes</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="/infoServer">Info Servidor</a> </li>
+                                <% } %>
+
+            </ul>
+        </div>
+        &nbsp;&nbsp;<span style="color:rgb(5, 5, 94); background-color: white;"><strong>
+                <%= nombre %>
+            </strong></span>
+    </nav>
+    <br><br>
+</header>

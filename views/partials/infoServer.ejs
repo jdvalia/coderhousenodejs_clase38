@@ -1,0 +1,68 @@
+<div class="container p-3 my-3 bg-light text-black">
+
+    <h3>información del servidor</h3>
+    <!-- argumentos_entrada -->
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Argumentos de entrada: </span>
+        </div>
+        <input class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+            value=<%=info.argumentos_entrada %> readonly>
+    </div>
+    <!-- plataforma -->
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Plataforma: </span>
+        </div>
+        <input class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value=<%=info.plataforma
+            %> readonly>
+    </div>
+    <!-- version_node -->
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Versión de Node: </span>
+        </div>
+        <input class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+            value=<%=info.version_node %> readonly>
+    </div>
+    <!-- memoria_total_reservada -->
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Memoria total reservada: </span>
+        </div>
+        <input class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+            value=<%=info.memoria_total_reservada %> readonly>
+    </div>
+    <!-- path_ejecucion -->
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Path Ejecución: </span>
+        </div>
+        <input class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+            value=<%=info.path_ejecucion %> readonly>
+    </div>
+    <!-- process_id -->
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Process id: </span>
+        </div>
+        <input class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value=<%=info.process_id
+            %> readonly>
+    </div>
+    <!-- carpeta_proyecto -->
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Carpeta del Proyecto: </span>
+        </div>
+        <input class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+            value=<%=info.carpeta_proyecto %> readonly>
+    </div>
+    <!-- cantidad_cpus -->
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Cantidad Cpus: </span>
+        </div>
+        <input class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+            value=<%=info.cantidad_cpus %> readonly>
+    </div>
+</div>

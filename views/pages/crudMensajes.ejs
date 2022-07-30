@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+
+    <!-- header -->
+    <%- include('../partials/header') %>
+
+        <div class="container mt-3">
+            <h1><strong>Listado de Mensajes del Chat</strong></h1>
+            <br>
+            <% const hayProducts=mensajesChatList.length> 0; %>
+                <div class="table-responsive">
+                    <% if(hayProducts){ %>
+                        <table class="table table-bordered tablaCRUD">
+                            <thead>
+                                <tr>
+                                    <th>Id Mensaje</th>
+                                    <th>email</th>
+                                    <th>Fecha y hora</th>
+                                    <th>mensaje</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for (const item of mensajesChatList) {%>
+                                    <tr>
+                                        <td>
+                                            <%= item.id %>
+                                        </td>
+                                        <td>
+                                            <%= item.email %>
+                                        </td>
+                                        <td>
+                                            <%= item.fechaHora %>
+                                        </td>
+                                        <td>
+                                            <%= item.mensaje %>
+                                        </td>
+                                        <td>
+                                            &nbsp;&nbsp;<a href='/mensajeChat/borrar/<%= item.id %>'>borrar</a>
+                                        </td>
+                                    </tr>
+                                    <%};%>
+                            </tbody>
+                        </table>
+                        <% } else{ %>
+                            <h3 class="alert alert-danger">No hay mensajes dados de alta</h1>
+                                <% } %>
+                </div>
+                <br>
+        </div>
+
+</body>
+
+</html>

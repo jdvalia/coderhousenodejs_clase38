@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+
+    <!-- header -->
+    <%- include('../partials/header') %>
+
+        <div class="container mt-3">
+            <h1><strong>Listao de Orders</strong></h1>
+            <br>
+            <p>Carts que se solicitó comprar cada usuario</p>
+            <% const hayProducts=ordersList.length> 0; %>
+                <div class="table-responsive">
+                    <% if(hayProducts){ %>
+                        <table class="table table-bordered tablaCRUD">
+                            <thead>
+                                <tr>
+                                    <th>Id Order</th>
+                                    <th>email</th>
+                                    <th>estado</th>
+                                    <th>Fecha de compra</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for (const item of ordersList) {%>
+                                    <tr>
+                                        <td>
+                                            <%= item.id %>
+                                        </td>
+                                        <td>
+                                            <%= item.email %>
+                                        </td>
+                                        <td>
+                                            <%= item.estado %>
+                                        </td>
+                                        <td>
+                                            <%= item.fechaPedida %>
+                                        </td>
+                                        <td>
+                                            &nbsp;&nbsp;<a href='/order/borrar/<%= item.id %>'>borrar</a>
+                                        </td>
+                                    </tr>
+                                    <%};%>
+                            </tbody>
+                        </table>
+                        <% } else{ %>
+                            <h3 class="alert alert-danger">No hay orders dados de alta</h1>
+                                <% } %>
+                </div>
+                <br>
+        </div>
+
+</body>
+
+</html>

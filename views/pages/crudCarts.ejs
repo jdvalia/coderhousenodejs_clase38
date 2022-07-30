@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+
+    <!-- header -->
+    <%- include('../partials/header') %>
+
+        <div class="container mt-3">
+            <h1><strong>Listado de Carts de todos los usuarios</strong></h1>
+            <br>
+            <% const hayProducts=cartsList.length> 0; %>
+                <div class="table-responsive">
+                    <% if(hayProducts){ %>
+                        <table class="table table-bordered tablaCRUD">
+                            <thead>
+                                <tr>
+                                    <th>Id Cart</th>
+                                    <th>Usuario</th>
+                                    <th>estado</th>
+                                    <th>Fecha Ult. Modif.</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for (const item of cartsList) {%>
+                                    <tr>
+                                        <td>
+                                            <%= item.id %>
+                                        </td>
+                                        <td>
+                                            <%= item.emailUsuario %>
+                                        </td>
+                                        <td>
+                                            <%= item.estado %>
+                                        </td>
+                                        <td>
+                                            <%= item.fechaUltModif %>
+                                        </td>
+                                        <td>
+                                            &nbsp;&nbsp;<a href='/cart/borrar/<%= item.id %>'>borrar</a>
+                                        </td>
+                                    </tr>
+                                    <%};%>
+                            </tbody>
+                        </table>
+                        <% } else{ %>
+                            <h3 class="alert alert-danger">No hay carts dados de alta</h1>
+                                <% } %>
+                </div>
+                <br>
+        </div>
+
+</body>
+
+</html>

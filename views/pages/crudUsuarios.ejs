@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+
+    <!-- header -->
+    <%- include('../partials/header') %>
+
+        <div class="container mt-3">
+            <h1><strong>Listado de Usuarios</strong></h1>
+            <br>
+            <% const hayProducts=usuariosList.length> 0; %>
+                <div class="table-responsive">
+                    <% if(hayProducts){ %>
+                        <table class="table table-bordered tablaCRUD">
+                            <thead>
+                                <tr>
+                                    <th>email</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>roles</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for (const item of usuariosList) {%>
+                                    <tr>
+                                        <td>
+                                            <%= item.email %>
+                                        </td>
+                                        <td>
+                                            <%= item.nombre %>
+                                        </td>
+                                        <td>
+                                            <%= item.apellido %>
+                                        </td>
+                                        <td>
+                                            <%= item.roles %>
+                                        </td>
+                                        <td>
+                                            &nbsp;&nbsp;<a href='/usuario/borrar/<%= item.email %>'>borrar</a>
+                                        </td>
+                                    </tr>
+                                    <%};%>
+                            </tbody>
+                        </table>
+                        <% } else{ %>
+                            <h3 class=" alert alert-danger">No hay usuarios dados de alta</h1>
+                                <% } %>
+                </div>
+                <br>
+        </div>
+
+</body>
+
+</html>

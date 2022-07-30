@@ -1,0 +1,16 @@
+<% const hayMensajes=mensajesChat.length> 0; %>
+<div class="container">
+    <% if(hayMensajes){ %>
+        <% for (const item of mensajesChat) {%>
+            <div>
+                <strong class="text-primary"> <%= item.tipo %> </strong>
+                [<span class="text-danger"> <%= item.fechaHora %> </span>]: 
+                <em> <%= item.mensaje %> </em>
+            </div>
+
+            <%};%>
+
+    <% } else{ %>
+        <h3 class="alert alert-danger">...escriba un mensaje para iniciar el chat</h1>
+    <% } %>
+</div>

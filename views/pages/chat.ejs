@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <%- include('../partials/head') %>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/mainChat.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <%- include('../partials/header') %>
+
+        <!-- Formulario para ingresar nuevos mensajes -->
+        <%- include('../partials/chatForm', {email: email}) %>
+
+            <!-- Listado de mensajes de chat -->
+            <div class="container" id="listadoDeMensajes"></div>
+
+</body>
+
+</html>

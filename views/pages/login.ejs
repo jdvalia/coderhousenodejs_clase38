@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+
+  <!-- header -->
+  <%- include('../partials/header') %>
+
+    <!-- cuerpo de la pagina  -->
+    <main class="main__login">
+      <h1 class="section-heading text-uppercase pt-4 pb-4"><strong>Iniciar Sesion</strong></h1>
+      <fieldset>
+        <form action="/login" method="post">
+          <label for="usuario"> Usuario : </label>
+          <input type="text" class="mb-4 p-1" name="username" id="email" placeholder="Ingrese su email">
+          <label for="clave"> Password : </label>
+          <input type="password" class="mb-4 p-1" name="password" id="password" placeholder="Ingrese su password">
+          <br>
+          <input type="submit" class="login__btn mt-4 p-2" name="Aceptar" value="Aceptar">
+        </form>
+      </fieldset>
+      <br>
+      <a href="/registrarse">Nuevo usuario</a>
+    </main>
+
+</body>
+
+</html>

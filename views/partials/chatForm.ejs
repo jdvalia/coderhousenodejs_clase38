@@ -1,0 +1,25 @@
+<div class="container">
+    <br>
+    <h3>Ingrese un nuevo mensaje</h3>
+
+    <form onsubmit="return agregarMensaje(this)">
+        <!-- email -->
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">E-mail: </span>
+            </div>
+            <input type="email" id="email" name="email" class="form-control" aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm" placeholder="Your Email" value="<%= email %>" readonly>
+        </div>
+        <!--mensaje a enviar-->
+        <div class="input-group input-group-sm mb-3">
+            <input type="text" id="mensaje" name="mensaje" class="form-control" ria-label="msj:"
+                aria-describedby="inputGroup-sizing-sm" placeholder="Ingresa un mensaje..." required>
+        </div>
+        <!--boton para enviar mensaje nuevo -->
+        <div class="form-group">
+            <input type="submit" value="Enviar" class="btn btn-success">
+        </div>
+    </form>
+
+</div>
