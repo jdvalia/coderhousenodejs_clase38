@@ -10,3 +10,18 @@
   }
 }
 [2022-07-30T18:04:08.660] [ERROR] default - Falló el envio de whatsapp del nuevo order - error:ReferenceError: err is not defined
+[2022-08-02T09:26:30.122] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Este Documento no fue encontrado en esta coleccion undefined con estos datos {"id":"Z4P4TENN1K3PTKAT"}',
+  detalles: undefined
+}
+[2022-08-02T11:15:02.949] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Este Documento no fue encontrado en esta coleccion undefined con estos datos {\"email\":\"peter\"}"}
+[2022-08-02T11:15:02.950] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Este Documento no fue encontrado en esta coleccion undefined con estos datos {"email":"peter"}',
+    detalles: undefined
+  }
+}

@@ -31,14 +31,15 @@ async function desconectar() {
 describe('servidor Mongo', () => {
 
     const url = "http://localhost:8080"
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkNC5NbjBpRkxORXJlR0ZLRGNOSXJndUFsd01TTTNpakl0Qi9LWjlOWGRIVjdPbjNsVVhhV1MiLCJyb2xlcyI6WyJhZG1pbiJdLCJ1c2VybmFtZSI6ImVsQWRtaW5pc3RyYWRvciIsIm5vbWJyZSI6IkFuaWJhbCIsImFwZWxsaWRvIjoiQWRtaW4iLCJkaXJlY2Npb24iOiJBZG1pcmFudGUgQnJvd24gMTIzNCIsImZlY2hhTmFjaW1pZW50byI6IjIyLzIvMTA4MCIsInRlbGVmb25vIjoiMTE2NTkyMjkwMSIsImF2YXRhciI6Imh0dHA6Ly9pbWFnZW5lcy9hZG1pbi5wbmciLCJfaWQiOiI2MmMwZWVkNzcyMGE5MzhhMDE4MTQ5NWIifSwiaWF0IjoxNjU4MDIyOTMwLCJleHAiOjE2NTgwMjY1MzB9.3iLRIxe2ZCPd9dpOjDS7Kh1e8va_hIDk6wcF3wmB7gw"
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiam9yZ2VAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkNWloSnhnLmoxTklqeE5BTHA4aHNTdUhaRE1yMnNpZ09hZ1JOTjN2cVMvWDQ0ck9sLzg2LnEiLCJyb2xlcyI6WyJhZG1pbiJdLCJ1c2VybmFtZSI6IkpvcmdlIiwibm9tYnJlIjoiSm9yZ2UiLCJhcGVsbGlkbyI6IlZhbGlhIiwiZGlyZWNjaW9uIjoiQ2FsbGUgNTYiLCJmZWNoYU5hY2ltaWVudG8iOiIwMTAxMDEiLCJ0ZWxlZm9ubyI6IjExMTIzNDU2NzgiLCJhdmF0YXIiOiJqb3JnZS5wbmciLCJfaWQiOiI2MmU0MTI4MWUxM2NjMDNlYWYyNzNhNzEifSwiaWF0IjoxNjU5NDQ5NzkzLCJleHAiOjE2NTk0NTMzOTN9.FnGPyBGg3niW8gf4CWSxLOxyXegKIiosr4RUkD68_gA"
     const username = "jorge@gmail.com"
     const password = "qwertyui"
-    const productID = "Z4P4TENN1K3PTKAT"
+    const productID = "Y86EUO2HR14JZGR0WIL55O"
     const productNuevo = {
         "nombre": "nike",
-        "description": "tenis",
-        "precio": 180000
+        "descripcion": "Confort",
+        "precio": 1200,
+        "stock": 123
     }
 
     before(async () => {
